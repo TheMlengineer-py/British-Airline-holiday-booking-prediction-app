@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+    <title>British Airline Holiday Booking Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+	<!--header part-->
+
+<!--form section-->
+<div class="container text-center col-sm-5 col-sm-pull-7 col-10 col-pull-1 mt-3 form_main border rounded">
+    
+    <form class="form-signin col-sm-12 col-12" action="{{ url_for('predict')}}" method="post">
+        <h1 class="h3 mb-4 font-weight-bold mt-4">British Airline Holiday Booking Prediction</h1>
+
+        <h1 class="h3 mb-4 font-weight-Verdana mt-4">The application predicts which customer buys British Airline Holiday using flight duration, length of stay at destination, number of passengers, flight hour(departure time) and purchase lead(number of days between travel date and booking date)</h1>
+
+        
+        <input type="text" name="Flight duration" id="Flight duration" class="form-control mb-3" placeholder="Flight duration" required="" autofocus="">
+        <input type="text" name="Length of stay" id="Length of stay" class="form-control mb-3" placeholder="Length of stay" required="" autofocus="">
+        <input type="text" name="Number of passengers" id="Number of passengers" class="form-control mb-3" placeholder="Number of passengers" required="" autofocus="">
+        <input type="text" name="Flight hour" id="Flight hour" class="form-control mb-3" placeholder="flight hour" required="" autofocus="">
+        <input type="text" name="Purchase lead" id="Purchase lead" class="form-control mb-3" placeholder="Purchase lead" required="" autofocus="">
+        
+        
+
+        <button class="btn btn-lg btn-primary btn-block mb-4" type="submit">Holiday booking prediction</button>
+    </form>
+
+</div>
+<br><br>
+<div class="container text-center font-weight-bold blockquote display-3">
+    {{prediction_text}}
+</div>
+    
+</body>
+</html
